@@ -1,7 +1,7 @@
 import 'package:supabase/supabase.dart'; // ← Pacote puro
 
 // ← Import correto do AuthService adaptado
-import '../../../../core/services/supabase_jwt.dart';
+import '../../../../core/services/auth_service.dart';
 import '../../../generic/data/generic_abstract_of_data_source.dart';
 import 'package:sacola_shared/sacola_shared.dart'; // Para UserModel, UserRole, etc.
 
