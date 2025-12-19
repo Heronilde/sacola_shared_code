@@ -3,7 +3,7 @@ import 'package:supabase/supabase.dart'; // ← Pacote puro
 // ← Import correto do AuthService adaptado
 import '../../../../core/services/auth_service.dart';
 import '../../../generic/data/generic_abstract_of_data_source.dart';
-import 'package:sacola_shared/sacola_shared.dart'; // Para UserModel, UserRole, etc.
+import '../model/user_model.dart';
 
 class UserModelRemoteDataSource extends GenericAbstractOfDataSource<UserModel> {
   final SupabaseClient _client;
@@ -11,6 +11,7 @@ class UserModelRemoteDataSource extends GenericAbstractOfDataSource<UserModel> {
   static const String _tableName = 'users';
 
   /// Cliente e AuthService injetados de fora (do app mobile ou web)
+
   UserModelRemoteDataSource({
     required SupabaseClient client,
     required AuthService authService,
