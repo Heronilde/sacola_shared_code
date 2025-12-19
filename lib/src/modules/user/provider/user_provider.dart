@@ -1,5 +1,5 @@
 import 'package:riverpod/legacy.dart';
-import '../../data/model/user_model.dart';
+import '../data/model/user_model.dart';
 
 // Notifier principal para o usuário
 class UserNotifier extends StateNotifier<UserModel?> {
