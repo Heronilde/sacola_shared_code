@@ -9,7 +9,7 @@ part of 'seller_model.dart';
 _$SellerModelImpl _$$SellerModelImplFromJson(Map<String, dynamic> json) =>
     _$SellerModelImpl(
       id: json['id'] as String,
-      userId: json['userId'] as String,
+      userId: json['user_id'] as String,
       documentType: json['documentType'] as String?,
       documentNumber: json['documentNumber'] as String?,
       documentImage: json['documentImage'] as String?,
@@ -39,7 +39,7 @@ _$SellerModelImpl _$$SellerModelImplFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$SellerModelImplToJson(_$SellerModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'userId': instance.userId,
+      'user_id': instance.userId,
       'documentType': instance.documentType,
       'documentNumber': instance.documentNumber,
       'documentImage': instance.documentImage,

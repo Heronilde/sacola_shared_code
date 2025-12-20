@@ -9,7 +9,8 @@ enum SellerStatus { pending, active, suspended, inactive }
 class SellerModel with _$SellerModel {
   const factory SellerModel({
     required String id,
-    required String userId, // FK → users.id
+    @JsonKey(name: 'user_id') required String userId,
+
     // Documentação (KYC)
     String? documentType,
     String? documentNumber,

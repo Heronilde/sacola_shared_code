@@ -22,8 +22,8 @@ SellerModel _$SellerModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SellerModel {
   String get id => throw _privateConstructorUsedError;
-  String get userId => throw _privateConstructorUsedError; // FK → users.id
-  // Documentação (KYC)
+  @JsonKey(name: 'user_id')
+  String get userId => throw _privateConstructorUsedError; // Documentação (KYC)
   String? get documentType => throw _privateConstructorUsedError;
   String? get documentNumber => throw _privateConstructorUsedError;
   String? get documentImage => throw _privateConstructorUsedError; // Endereço
@@ -65,7 +65,7 @@ abstract class $SellerModelCopyWith<$Res> {
   @useResult
   $Res call({
     String id,
-    String userId,
+    @JsonKey(name: 'user_id') String userId,
     String? documentType,
     String? documentNumber,
     String? documentImage,
@@ -234,7 +234,7 @@ abstract class _$$SellerModelImplCopyWith<$Res>
   @useResult
   $Res call({
     String id,
-    String userId,
+    @JsonKey(name: 'user_id') String userId,
     String? documentType,
     String? documentNumber,
     String? documentImage,
@@ -395,7 +395,7 @@ class __$$SellerModelImplCopyWithImpl<$Res>
 class _$SellerModelImpl implements _SellerModel {
   const _$SellerModelImpl({
     required this.id,
-    required this.userId,
+    @JsonKey(name: 'user_id') required this.userId,
     this.documentType,
     this.documentNumber,
     this.documentImage,
@@ -424,8 +424,8 @@ class _$SellerModelImpl implements _SellerModel {
   @override
   final String id;
   @override
+  @JsonKey(name: 'user_id')
   final String userId;
-  // FK → users.id
   // Documentação (KYC)
   @override
   final String? documentType;
@@ -581,7 +581,7 @@ class _$SellerModelImpl implements _SellerModel {
 abstract class _SellerModel implements SellerModel {
   const factory _SellerModel({
     required final String id,
-    required final String userId,
+    @JsonKey(name: 'user_id') required final String userId,
     final String? documentType,
     final String? documentNumber,
     final String? documentImage,
@@ -610,8 +610,8 @@ abstract class _SellerModel implements SellerModel {
   @override
   String get id;
   @override
-  String get userId; // FK → users.id
-  // Documentação (KYC)
+  @JsonKey(name: 'user_id')
+  String get userId; // Documentação (KYC)
   @override
   String? get documentType;
   @override
