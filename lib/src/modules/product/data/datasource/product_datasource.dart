@@ -134,9 +134,9 @@ class ProductModelRemoteDataSource
       }
 
       final response = await query.order('created_at', ascending: false);
-
+      print('produtos$response');
       if (response.isEmpty) return <ProductModel>[];
-
+      print('produtos$response');
       return response.map<ProductModel>(_mapToProductModel).toList();
     });
   }
