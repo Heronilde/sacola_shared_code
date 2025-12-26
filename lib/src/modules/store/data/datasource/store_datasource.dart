@@ -80,7 +80,7 @@ class StoreModelRemoteDataSource
 
   @override
   Future<StoreModel?> getById(String id) async {
-    return await _authService.executeWithAuth(() async {
+    return await _authService.executePublic(() async {
       print('StoreDataSource: Buscando loja com id: $id');
 
       final response = await _client
@@ -112,7 +112,7 @@ class StoreModelRemoteDataSource
       'StoreDataSource: Buscando todas as lojas com filtros: '
       'filter1=$filter1, filter2=$filter2, filter3=$filter3, filter4=$filter4',
     );
-    return await _authService.executeWithAuth(() async {
+    return await _authService.executePublic(() async {
       var query = _client.from(_tableName).select();
 
       // filter1: seller_id
