@@ -91,7 +91,7 @@ class SellerModelRemoteDataSource
       'SellerDataSource: Buscando todos os vendedores com filtros: '
       'filter1=$filter1, filter2=$filter2, filter3=$filter3, filter4=$filter4',
     );
-    return await _authService.executeWithAuth(() async {
+    return await _authService.executePublic(() async {
       var query = _client.from(_tableName).select();
 
       // filter1: status
@@ -194,7 +194,7 @@ class SellerModelRemoteDataSource
 
   // Métodos auxiliares específicos
   Future<SellerModel?> getByUserId(String userId) async {
-    return await _authService.executeWithAuth(() async {
+    return await _authService.executePublic(() async {
       final response = await _client
           .from(_tableName)
           .select()
