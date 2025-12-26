@@ -363,7 +363,7 @@ class StoreModelRemoteDataSource
 
   // Métodos auxiliares específicos
   Future<StoreModel?> getBySlug(String slug) async {
-    return await _authService.executeWithAuth(() async {
+    return await _authService.executePublic(() async {
       print('StoreDataSource: Buscando loja por slug: $slug');
 
       final response = await _client
@@ -383,7 +383,7 @@ class StoreModelRemoteDataSource
   }
 
   Future<List<StoreModel>?> getBySellerId(String sellerId) async {
-    return await _authService.executeWithAuth(() async {
+    return await _authService.executePublic(() async {
       print('StoreDataSource: Buscando lojas do seller: $sellerId');
 
       final response = await _client
@@ -404,7 +404,7 @@ class StoreModelRemoteDataSource
   }
 
   Future<void> incrementViewCount(String id) async {
-    return await _authService.executeWithAuth(() async {
+    return await _authService.executePublic(() async {
       print('StoreDataSource: Incrementando view_count da loja: $id');
       await _client.rpc('increment_store_views', params: {'store_id': id});
       print('StoreDataSource: view_count incrementado com sucesso');
